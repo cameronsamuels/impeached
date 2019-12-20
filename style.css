@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: #eee;
+  color: #222;
+  font-family: helvetica, arial, sans-serif;
+}
+
+table {
+  display: none;
+  width: 80%;
+  max-width: 500px;
+  border: 4px #555 solid;
+}
+
+body>a {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  background: url(images/arrow.png) center/100% no-repeat;
+}
+
+body>a + a {
+  left: calc(100% - 55px);
+  transform: rotate(180deg);
+}
+
+table:target {
+  display: table;
+}
+
+table:target + a,
+table:target + a + a {
+  display: block;
+}
+
+tr {
+  text-align: center;
+}
+
+th {
+  background: #d0d0d0;
+  font-size: 3em;
+}
+
+td>img {
+  display: block;
+  width: 50%;
+  margin: 15px auto;
+}
+
+td>h2 {
+  margin: 15px 0 5px;
+  font-size: 1.8em;
+}
+
+td>ol {
+  text-align: left;
+}
+
+td>a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  color: #222;
+  border: 3px #555 solid;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
