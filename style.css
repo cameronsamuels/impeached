@@ -12,8 +12,8 @@ body {
 
 table {
   display: none;
-  width: 80%;
-  max-width: 500px;
+  width: 80vmin;
+  margin: auto;
   border: 4px #555 solid;
 }
 
@@ -30,6 +30,16 @@ body>a {
 body>a + a {
   left: calc(100% - 55px);
   transform: rotate(180deg);
+}
+
+@media all and (max-width: 600px) {
+  body>a {
+    width: 30px;
+    height: 30px;
+  }
+  body>a + a {
+    left: calc(100% - 35px);
+  }
 }
 
 table:target {
@@ -62,6 +72,9 @@ td>h2 {
 }
 
 td>ol {
+  display: inline-block;
+  margin: auto;
+  padding: 0;
   text-align: left;
 }
 
@@ -74,4 +87,25 @@ td>a {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+}
+
+body>div {
+  display: none;
+  position: relative;
+  margin: auto;
+}
+
+table:not(:target) + a + a + table:not(:target) + a + a + table:not(:target) + a + a + div {
+  display: block;
+}
+
+body>div>a>img:nth-of-type(1) {
+  width: 75vmin;
+}
+
+body>div>a>img:nth-of-type(2) {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 40vmin;
 }
