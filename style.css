@@ -95,7 +95,7 @@ body>div {
   margin: auto;
 }
 
-table:not(:target) + a + a + table:not(:target) + a + a + table:not(:target) + a + a + div {
+table:not(:target) + a + a + table:not(:target) + a + a + table:not(:target) + a + a + table:not(:target) + a + a + div {
   display: block;
 }
 
